@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Speech-to-Text Interface</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gradio"></script>
+</head>
+<body>
+    <h1>Speech-to-Text Interface</h1>
+    <div id="interface"></div>
+    <script>
+        gr.Interface.createFromYaml(`{{ interface_yaml|safe }}`).then(function(interface) {
+            interface.launch();
+        });
+    </script>
+</body>
+</html>
